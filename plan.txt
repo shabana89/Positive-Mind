@@ -1,6 +1,16 @@
 Routine page:
-Components - routineDisplay, routineBox and addTaskButton
+Components - routineDisplay, routineBox (imported from generic) and addTaskButton (imported from generic)
 
-Create the addTaskButton
-Create routineBox
+Create the addTaskButton (imported from generic)
+Create routineBox (imported from generic)
 Add addTaskButton to routineBox
+
+Steps:
+- Make generic Components
+
+  - Box
+    - blank box in Generic // add colours in seperate pages 
+  - Button 
+  - Nav 
+
+- Import Generic components into each page to build page

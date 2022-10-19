@@ -1,0 +1,6 @@
+Routine page:
+Components - routineDisplay, routineBox and addTaskButton
+
+Create the addTaskButton
+Create routineBox
+Add addTaskButton to routineBox

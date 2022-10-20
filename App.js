@@ -6,7 +6,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Hello!</Text>
-      {/* <PMButton /> */}
+      <PMButton />
       <StatusBar style="auto" />
     </View>
   );

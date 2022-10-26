@@ -4,15 +4,15 @@ import { StyleSheet, View, Text } from "react-native";
 export default function PMButton({ handleClick }) {
   return (
     <View style={styles.container}>
-      <AddCircleIcon onClick={handleClick} />
+      <AddCircleIcon style={{ fill: "#77567A" }} onClick={handleClick} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.05,
-    backgroundColor: "#77567A",
+    flex: 0.04,
+    backgroundColor: "#FFFCF7",
     alignItems: "center",
     justifyContent: "center",
   },

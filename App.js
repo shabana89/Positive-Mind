@@ -12,7 +12,7 @@ export default function App() {
     <View style={styles.container}>
       <Text>Hello!</Text>
       <PMButton handleClick={testFunction} />
-      <PMBox task="test" />
+      {/* <PMBox task="test" /> */}
       <StatusBar style="auto" />
     </View>
   );

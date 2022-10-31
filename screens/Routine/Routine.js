@@ -1,15 +1,19 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import Routine from "./screens/Routine/Routine";
+import PMButton from "../../components/Generic/Button";
+import PMBox from "../../components/Generic/Box";
 
-export default function App() {
+export default function Routine() {
   function testFunction() {
     console.log("clicked");
   }
 
   return (
     <View style={styles.container}>
-      <Routine />
+      <Text>Hello!</Text>
+      <PMButton handleClick={testFunction} />
+      <PMBox task="test" />
+      <StatusBar style="auto" />
     </View>
   );
 }

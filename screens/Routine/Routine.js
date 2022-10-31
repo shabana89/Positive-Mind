@@ -5,8 +5,8 @@ import RoutineDisplay from "../../components/Generic/routineDisplay";
 export default function Routine() {
   return (
     <SafeAreaView style={styles.container}>
-      <RoutineDisplay time={"Monday"} />
-      <Text>Hello from Routine.js</Text>
+      <RoutineDisplay time={"Morning"} />
+
       <StatusBar style="auto" />
     </SafeAreaView>
   );

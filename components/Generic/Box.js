@@ -5,18 +5,21 @@ export default function PMBox({ task }) {
   return (
     <View style={styles.container}>
       <Text>{task}</Text>
+      <Text>{task}</Text>
+      <Text>{task}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.5,
-    width: "500%",
-    backgroundColor: "#6096BA",
+    height: "139px",
+    width: "342px",
+
     alignItems: "center",
     justifyContent: "center",
-    borderColor: "#000000",
-    borderWidth: "10px",
+    borderColor: "#77567A",
+    borderWidth: "3px",
+    borderRadius: "20px",
   },
 });

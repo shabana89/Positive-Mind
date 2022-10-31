@@ -10,7 +10,7 @@ export default function Routine() {
 
   return (
     <View style={styles.container}>
-      <Text>Hello!</Text>
+      <Text></Text>
       <PMButton handleClick={testFunction} />
       <PMBox task="test" />
       <StatusBar style="auto" />

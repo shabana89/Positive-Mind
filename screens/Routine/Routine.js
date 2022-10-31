@@ -1,20 +1,14 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import PMButton from "../../components/Generic/Button";
-import PMBox from "../../components/Generic/Box";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import RoutineDisplay from "../../components/Generic/routineDisplay";
 
 export default function Routine() {
-  function testFunction() {
-    console.log("clicked");
-  }
-
   return (
-    <View style={styles.container}>
-      <Text></Text>
-      <PMButton handleClick={testFunction} />
-      <PMBox task="test" />
+    <SafeAreaView style={styles.container}>
+      <RoutineDisplay time={"Monday"} />
+      <Text>Hello from Routine.js</Text>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 

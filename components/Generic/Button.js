@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFCF7",
     alignItems: "center",
     justifyContent: "center",
-    borderWidth: "10px",
+    borderWidth: "20px",
+    maxWidth: "20px",
     borderColor: "#000000",
   },
 });

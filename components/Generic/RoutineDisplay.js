@@ -29,23 +29,10 @@ export default function RoutineDisplay({ time }) {
 
 const styles = StyleSheet.create({
   container: {
-    // display: "flex",
-    // width: "393px",
-    // height: "236px",
-    // borderColor: "#000000",
-    // borderWidth: "5px",
-    // backgroundColor: "#ffffff",
-    // alignItems: "center",
-    // justifyContent: "center",
+    marginBottom: "40px",
   },
   textbutton: {
-    // display: "flex",
     justifyContent: "space-between",
     flexDirection: "row",
-    // borderColor: "#847382",
-    // borderWidth: "10px",
-    // width: "350px",
-    // height: "50px",
-    // alignItems: "center",
   },
 });

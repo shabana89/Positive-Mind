@@ -6,6 +6,8 @@ export default function Routine() {
   return (
     <SafeAreaView style={styles.container}>
       <RoutineDisplay time={"Morning"} />
+      <RoutineDisplay time={"Afternoon"} />
+      <RoutineDisplay time={"Evening"} />
 
       <StatusBar style="auto" />
     </SafeAreaView>

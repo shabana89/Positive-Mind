@@ -4,9 +4,9 @@ import React from "react";
 export default function PMBox({ task }) {
   return (
     <View style={styles.container}>
+      {/* <Text>{task}</Text>
       <Text>{task}</Text>
-      <Text>{task}</Text>
-      <Text>{task}</Text>
+      <Text>{task}</Text> */}
     </View>
   );
 }

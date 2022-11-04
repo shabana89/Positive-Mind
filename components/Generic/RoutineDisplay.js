@@ -15,46 +15,37 @@ export default function RoutineDisplay({ time }) {
             fontSize: "32px",
             fontWeight: "700",
             color: "#77567A",
-            position: "relative",
-            right: "96px",
+            marginLeft: "10px",
           }}
         >
           {time}
         </Text>
-        <PMButton
-          style={{
-            position: "relative",
-            right: "100px",
-            backgroundColor: "#000000",
-            float: "left",
-          }}
-          handleClick={testFunction}
-        />
-        <PMBox task={"test"} />
+        <PMButton handleClick={testFunction} />
       </View>
+      <PMBox task={"test"} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
-    width: "393px",
-    height: "236px",
-    borderColor: "#000000",
-    borderWidth: "5px",
-    backgroundColor: "#ffffff",
+    // display: "flex",
+    // width: "393px",
+    // height: "236px",
+    // borderColor: "#000000",
+    // borderWidth: "5px",
+    // backgroundColor: "#ffffff",
     // alignItems: "center",
     // justifyContent: "center",
   },
   textbutton: {
-    display: "flex",
+    // display: "flex",
     justifyContent: "space-between",
     flexDirection: "row",
-    borderColor: "#847382",
-    borderWidth: "10px",
-    width: "350px",
-    height: "50px",
-    alignItems: "center",
+    // borderColor: "#847382",
+    // borderWidth: "10px",
+    // width: "350px",
+    // height: "50px",
+    // alignItems: "center",
   },
 });

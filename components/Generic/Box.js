@@ -5,11 +5,13 @@ import {
   tasksAfternoon,
   tasksEvening,
 } from "../../libs/tasksRoutine";
+import TaskDisplay from "../Routine/TaskDisplay";
 
 export default function PMBox({ array }) {
   return (
     <View style={styles.container}>
       <ScrollView>
+        <TaskDisplay />
         {array.map((task, index) => (
           <Text key={index}>{task.task}</Text>
         ))}

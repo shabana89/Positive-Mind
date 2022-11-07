@@ -23,6 +23,26 @@ const tasksMorning = [
     id: "6",
     task: "This is a Morning task",
   },
+  {
+    id: "7",
+    task: "This is a Morning task",
+  },
+  {
+    id: "8",
+    task: "This is a Morning task",
+  },
+  {
+    id: "9",
+    task: "This is a Morning task",
+  },
+  {
+    id: "10",
+    task: "This is a Morning task",
+  },
+  {
+    id: "11",
+    task: "This is a Morning task",
+  },
 ];
 
 const tasksAfternoon = [

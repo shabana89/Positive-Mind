@@ -1,7 +1,8 @@
 import { StyleSheet, View, Text, SafeAreaView } from "react-native";
 import React from "react";
-import PMBox from "./Box";
-import PMButton from "./Button";
+import PMBox from "../Generic/Box";
+import PMButton from "../Generic/Button";
+
 
 export default function RoutineDisplay({ time, todArray }) {
   function testFunction() {
@@ -23,6 +24,7 @@ export default function RoutineDisplay({ time, todArray }) {
         <PMButton handleClick={testFunction} />
       </View>
       <PMBox array={todArray} />
+ 
     </View>
   );
 }

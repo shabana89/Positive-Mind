@@ -1,13 +1,18 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import RoutineDisplay from "../../components/Generic/routineDisplay";
+import {
+  tasksMorning,
+  tasksAfternoon,
+  tasksEvening,
+} from "../../libs/tasksRoutine";
 
 export default function Routine() {
   return (
     <SafeAreaView style={styles.container}>
-      <RoutineDisplay time={"Morning"} />
-      <RoutineDisplay time={"Afternoon"} />
-      <RoutineDisplay time={"Evening"} />
+      <RoutineDisplay time={"Morning"} todArray={tasksMorning} />
+      <RoutineDisplay time={"Afternoon"} todArray={tasksAfternoon} />
+      <RoutineDisplay time={"Evening"} todArray={tasksEvening} />
 
       <StatusBar style="auto" />
     </SafeAreaView>

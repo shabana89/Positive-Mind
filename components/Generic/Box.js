@@ -1,17 +1,18 @@
 import { StyleSheet, View, Text, ScrollView } from "react-native";
 import React from "react";
 import {
-  tasksMorn,
+  tasksMorning,
   tasksAfternoon,
   tasksEvening,
 } from "../../libs/tasksRoutine";
 
-export default function PMBox({ task }) {
+export default function PMBox({ array }) {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <Text>{tasksMorn[0].task}</Text>
-        <Text>{task}</Text>
+        {array.map((task, index) => (
+          <Text key={index}>{task.task}</Text>
+        ))}
       </ScrollView>
     </View>
   );

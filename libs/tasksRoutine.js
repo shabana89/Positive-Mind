@@ -1,4 +1,4 @@
-const tasksMorn = [
+const tasksMorning = [
   {
     id: "1",
     task: "This is a Morning task",
@@ -79,4 +79,4 @@ const tasksEvening = [
   },
 ];
 
-export { tasksMorn, tasksAfternoon, tasksEvening };
+export { tasksMorning, tasksAfternoon, tasksEvening };

@@ -3,7 +3,7 @@ import React from "react";
 import PMBox from "./Box";
 import PMButton from "./Button";
 
-export default function RoutineDisplay({ time }) {
+export default function RoutineDisplay({ time, todArray }) {
   function testFunction() {
     console.log("clicked");
   }
@@ -22,7 +22,7 @@ export default function RoutineDisplay({ time }) {
         </Text>
         <PMButton handleClick={testFunction} />
       </View>
-      <PMBox task={"test"} />
+      <PMBox array={todArray} />
     </View>
   );
 }

@@ -11,9 +11,8 @@ export default function PMBox({ array }) {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <TaskDisplay />
         {array.map((task, index) => (
-          <Text key={index}>{task.task}</Text>
+          <TaskDisplay task={task.task} key={index} />
         ))}
       </ScrollView>
     </View>
@@ -30,6 +29,8 @@ const styles = StyleSheet.create({
     borderColor: "#77567A",
     borderWidth: "3px",
     borderRadius: "20px",
+    // padding: "10px",
+    paddingVertical: "15px",
   },
 });
 

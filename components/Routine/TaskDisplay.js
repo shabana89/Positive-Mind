@@ -2,14 +2,14 @@ import { StyleSheet, View, Text, SafeAreaView } from "react-native";
 import React from "react";
 import CheckBox from "@react-native-community/checkbox";
 
-export default function TaskDisplay() {
+export default function TaskDisplay({ task }) {
   return (
     <View style={styles.container}>
       <View style={styles.checkboxContainer}>
         <input type="checkbox" style={styles.checkbox} />
       </View>
       <View style={styles.textContainer}>
-        <Text style={styles.text}>TASK DISPLAY</Text>
+        <Text style={styles.text}>{task}</Text>
       </View>
     </View>
   );
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     width: "20rem",
-    marginTop: 10,
+    marginBottom: 10,
     marginLeft: 3,
   },
   checkboxContainer: {

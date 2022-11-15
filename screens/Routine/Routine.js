@@ -6,6 +6,7 @@ import {
   tasksAfternoon,
   tasksEvening,
 } from "../../libs/tasksRoutine";
+import Popup from "../../components/Generic/Popup";
 
 export default function Routine() {
   return (
@@ -13,7 +14,7 @@ export default function Routine() {
       <RoutineDisplay time={"Morning"} todArray={tasksMorning} />
       <RoutineDisplay time={"Afternoon"} todArray={tasksAfternoon} />
       <RoutineDisplay time={"Evening"} todArray={tasksEvening} />
-
+      <Popup />
       <StatusBar style="auto" />
     </SafeAreaView>
   );

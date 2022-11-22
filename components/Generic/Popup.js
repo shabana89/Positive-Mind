@@ -6,6 +6,7 @@ import { useState } from "react";
 
 export default function Popup() {
   const [popup, setPopup] = useState(false);
+
   return (
     <View style={styles.container}>
       <Button
@@ -20,7 +21,7 @@ export default function Popup() {
           setPopup({ visible: false });
         }}
       >
-        <DialogContent></DialogContent>
+        <DialogContent>Hello</DialogContent>
       </Dialog>
     </View>
   );

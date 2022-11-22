@@ -9,9 +9,17 @@ import {
 import Popup from "../../components/Generic/Popup";
 
 export default function Routine() {
+  function morningClick() {
+    console.log("morning");
+  }
+
   return (
     <SafeAreaView style={styles.container}>
-      <RoutineDisplay time={"Morning"} todArray={tasksMorning} />
+      <RoutineDisplay
+        time={"Morning"}
+        todArray={tasksMorning}
+        handleClick={morningClick}
+      />
       <RoutineDisplay time={"Afternoon"} todArray={tasksAfternoon} />
       <RoutineDisplay time={"Evening"} todArray={tasksEvening} />
       <Popup />

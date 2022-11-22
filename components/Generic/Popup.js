@@ -1,23 +1,47 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, TextInput, Text } from "react-native";
+import Dialog, { DialogContent } from "react-native-popup-dialog";
+import { Button } from "react-native";
+import { SafeAreaView, StyleSheet, TextInput, Text, View } from "react-native";
 import { useState } from "react";
 
-function Popup() {
-  const [text, onChangeText] = useState("");
-
+export default function Popup() {
+  const [popup, setPopup] = useState(false);
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>Add to your todo list!</Text>
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeText}
-        value={text}
-        multiline={true}
-        maxLength={70}
+    <View style={styles.container}>
+      <Button
+        title="Show Dialog"
+        onPress={() => {
+          setPopup({ visible: true });
+        }}
       />
-    </SafeAreaView>
+      <Dialog
+        visible={popup.visible}
+        onTouchOutside={() => {
+          setPopup({ visible: false });
+        }}
+      >
+        <DialogContent></DialogContent>
+      </Dialog>
+    </View>
   );
 }
+
+// function Popup() {
+//   const [text, onChangeText] = useState("");
+
+//   return (
+//     <SafeAreaView style={styles.container}>
+//       <Text style={styles.text}>Add to your todo list!</Text>
+//       <TextInput
+//         style={styles.input}
+//         onChangeText={onChangeText}
+//         value={text}
+//         multiline={true}
+//         maxLength={70}
+//       />
+//     </SafeAreaView>
+//   );
+// }
 
 const styles = StyleSheet.create({
   input: {
@@ -42,4 +66,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Popup;
+// export default Popup;

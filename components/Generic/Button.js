@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, Button } from "react-native";
 import Dialog, { DialogContent } from "react-native-popup-dialog";
 import { useState } from "react";
 
-export default function PMButton({ clickFunction }) {
+export default function PMButton({ handleClick }) {
   function consoleLog() {
     console.log("clicked");
   }
@@ -30,7 +30,7 @@ export default function PMButton({ clickFunction }) {
         <DialogContent>
           <Text>Text</Text>
         </DialogContent>
-        <Button onClick={consoleLog}>Button</Button>
+        <Button title="save" onPress={handleClick} />
       </Dialog>
     </View>
   );

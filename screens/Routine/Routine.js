@@ -10,7 +10,13 @@ import Popup from "../../components/Generic/Popup";
 
 export default function Routine() {
   function morningClick() {
-    console.log("morning");
+    console.log("im pushing to the morning libs");
+  }
+  function afternoonClick() {
+    console.log("im pushing to the afternoon libs");
+  }
+  function eveningClick() {
+    console.log("im pushing to the evening libs");
   }
 
   return (
@@ -18,10 +24,18 @@ export default function Routine() {
       <RoutineDisplay
         time={"Morning"}
         todArray={tasksMorning}
-        handleClick={morningClick}
+        onPressFunction={morningClick}
       />
-      <RoutineDisplay time={"Afternoon"} todArray={tasksAfternoon} />
-      <RoutineDisplay time={"Evening"} todArray={tasksEvening} />
+      <RoutineDisplay
+        time={"Afternoon"}
+        todArray={tasksAfternoon}
+        onPressFunction={afternoonClick}
+      />
+      <RoutineDisplay
+        time={"Evening"}
+        todArray={tasksEvening}
+        onPressFunction={eveningClick}
+      />
       <Popup />
       <StatusBar style="auto" />
     </SafeAreaView>

@@ -6,7 +6,6 @@ import {
   tasksAfternoon,
   tasksEvening,
 } from "../../libs/tasksRoutine";
-import Popup from "../../components/Generic/Popup";
 
 export default function Routine() {
   function morningClick() {
@@ -25,18 +24,21 @@ export default function Routine() {
         time={"Morning"}
         todArray={tasksMorning}
         onPressFunction={morningClick}
+        text={"Please enter your Morning task"}
       />
       <RoutineDisplay
         time={"Afternoon"}
         todArray={tasksAfternoon}
         onPressFunction={afternoonClick}
+        text={"Please enter your Afternoon task"}
       />
       <RoutineDisplay
         time={"Evening"}
         todArray={tasksEvening}
         onPressFunction={eveningClick}
+        text={"Please enter your Evening task"}
       />
-      <Popup />
+
       <StatusBar style="auto" />
     </SafeAreaView>
   );

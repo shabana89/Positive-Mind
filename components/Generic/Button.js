@@ -1,12 +1,14 @@
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import { StyleSheet, View, Text, Button } from "react-native";
-import Dialog, { DialogContent } from "react-native-popup-dialog";
+import Dialog, {
+  DialogContent,
+  DialogButton,
+  DialogTitle,
+} from "react-native-popup-dialog";
 import { useState } from "react";
+import { height } from "@mui/system";
 
-export default function PMButton({ handleClick }) {
-  function consoleLog() {
-    console.log("clicked");
-  }
+export default function PMButton({ handleClick, text }) {
   const [popup, setPopup] = useState(false);
   return (
     <View style={styles.container}>
@@ -22,15 +24,27 @@ export default function PMButton({ handleClick }) {
       />
 
       <Dialog
+        containerStyle={styles.popup}
         visible={popup.visible}
         onTouchOutside={() => {
           setPopup({ visible: false });
         }}
+        width="0.75"
+        height="0.20"
       >
-        <DialogContent>
-          <Text>Text</Text>
-        </DialogContent>
-        <Button title="save" onPress={handleClick} />
+        <DialogTitle title={text}></DialogTitle>
+        <DialogButton
+          style={{
+            backgroundColor: "#77567A",
+            color: "#FFFCF7",
+            maxHeight: "10%",
+            width: "50%",
+            top: "40%",
+          }}
+          text="save"
+          textStyle={{ color: "#FFFCF7" }}
+          onPress={handleClick}
+        />
       </Dialog>
     </View>
   );
@@ -43,6 +57,18 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderColor: "#000000",
   },
+  popup: {
+    backgroundColor: "#FFFCF7",
+    alignItems: "center",
+    justifyContent: "center",
+    borderColor: "#77567A",
+  },
+  // button: {
+  //   backgroundColor: "#77567A",
+  //   color: "#77567A",
+  //   alignItems: "center",
+  //   justifyContent: "center",
+  // },
 });
 
 /*

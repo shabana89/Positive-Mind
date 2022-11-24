@@ -1,5 +1,12 @@
 import AddCircleIcon from "@mui/icons-material/AddCircle";
-import { StyleSheet, View, Text, Button } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  Button,
+  TextInput,
+  ScrollView,
+} from "react-native";
 import Dialog, {
   DialogContent,
   DialogButton,
@@ -10,6 +17,7 @@ import { height } from "@mui/system";
 
 export default function PMButton({ handleClick, text }) {
   const [popup, setPopup] = useState(false);
+
   return (
     <View style={styles.container}>
       <AddCircleIcon
@@ -29,22 +37,23 @@ export default function PMButton({ handleClick, text }) {
         onTouchOutside={() => {
           setPopup({ visible: false });
         }}
-        width="0.75"
-        height="0.20"
+        width="75%"
+        height="20%"
       >
-        <DialogTitle title={text}></DialogTitle>
-        <DialogButton
-          style={{
-            backgroundColor: "#77567A",
-            color: "#FFFCF7",
-            maxHeight: "10%",
-            width: "50%",
-            top: "40%",
-          }}
-          text="save"
-          textStyle={{ color: "#FFFCF7" }}
-          onPress={handleClick}
-        />
+        <ScrollView>
+          <DialogTitle
+            style={styles.popupTitle}
+            textStyle={{ color: "#FFFCF7" }}
+            title={text}
+          ></DialogTitle>
+          <TextInput style={styles.input} multiline={true} maxLength={100} />
+          <DialogButton
+            style={styles.dialogButton}
+            text="Save"
+            textStyle={{ color: "#FFFCF7" }}
+            onPress={handleClick}
+          />
+        </ScrollView>
       </Dialog>
     </View>
   );
@@ -63,12 +72,27 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderColor: "#77567A",
   },
-  // button: {
-  //   backgroundColor: "#77567A",
-  //   color: "#77567A",
-  //   alignItems: "center",
-  //   justifyContent: "center",
-  // },
+  popupTitle: {
+    backgroundColor: "#77567A",
+    color: "#FFFCF7",
+  },
+  dialogButton: {
+    backgroundColor: "#77567A",
+    color: "#FFFCF7",
+    maxHeight: "10%",
+    width: "30%",
+    top: "10%",
+    borderRadius: "20px",
+  },
+  input: {
+    width: "80%",
+    height: "30%",
+    borderColor: "#77567A",
+    borderWidth: "2px",
+    alignSelf: "center",
+    marginTop: "20px",
+    borderRadius: "15px",
+  },
 });
 
 /*

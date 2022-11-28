@@ -2,6 +2,8 @@ import { StyleSheet, View, Text, SafeAreaView } from "react-native";
 import React from "react";
 import PMBox from "../Generic/Box";
 import PMButton from "../Generic/Button";
+import { useState } from "react";
+import { nanoid } from "nanoid";
 
 export default function RoutineDisplay({
   time,
@@ -9,8 +11,16 @@ export default function RoutineDisplay({
   onPressFunction,
   text,
 }) {
-  function testFunction() {
-    console.log("clicked");
+  const [userInput, setUserInput] = useState("");
+  const [taskArray, setTaskArray] = useState(todArray);
+  const [id, setId] = useState(nanoid());
+  const [popup, setPopup] = useState(false);
+
+  function addUserInput() {
+    setTaskArray([...taskArray, { id: { id }, task: userInput }]);
+    setId(nanoid());
+    console.log(taskArray);
+    setPopup(false);
   }
   return (
     <View style={styles.container}>
@@ -25,9 +35,16 @@ export default function RoutineDisplay({
         >
           {time}
         </Text>
-        <PMButton handleClick={onPressFunction} text={text} />
+        <PMButton
+          handleClick={onPressFunction}
+          text={text}
+          setUserInput={setUserInput}
+          addUserInput={addUserInput}
+          popup={popup}
+          setPopup={setPopup}
+        />
       </View>
-      <PMBox array={todArray} />
+      <PMBox array={taskArray} />
     </View>
   );
 }

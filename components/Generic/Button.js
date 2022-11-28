@@ -15,9 +15,13 @@ import Dialog, {
 import { useState } from "react";
 import { height } from "@mui/system";
 
-export default function PMButton({ handleClick, text }) {
-  const [popup, setPopup] = useState(false);
-
+export default function PMButton({
+  text,
+  setUserInput,
+  addUserInput,
+  popup,
+  setPopup,
+}) {
   return (
     <View style={styles.container}>
       <AddCircleIcon
@@ -46,12 +50,17 @@ export default function PMButton({ handleClick, text }) {
             textStyle={{ color: "#FFFCF7" }}
             title={text}
           ></DialogTitle>
-          <TextInput style={styles.input} multiline={true} maxLength={100} />
+          <TextInput
+            style={styles.input}
+            multiline={true}
+            maxLength={100}
+            onChangeText={setUserInput}
+          />
           <DialogButton
             style={styles.dialogButton}
             text="Save"
             textStyle={{ color: "#FFFCF7" }}
-            onPress={handleClick}
+            onPress={addUserInput}
           />
         </ScrollView>
       </Dialog>
@@ -96,14 +105,8 @@ const styles = StyleSheet.create({
 });
 
 /*
-we now have a button that opens a popup dialog
-we want each button to show a specific popup (ie morning for morning tasks etc)
-we need 3 different popups X
-hand down each popup as a prop to the button X
-and we hand it down in routine display? X
-
-hard code text and keep it general
-inside the popup, there should be a button
-when that button is clicked, it pushes the data to the correct libs 
-that function or those functions is/are a prop that we hand down
+set up state to record the value of the text in the input field 
+as user types, the state is updated via the setState function
+as button is pressed, state is pushed to libs? 
+map through the libs and display the tasks 
 */

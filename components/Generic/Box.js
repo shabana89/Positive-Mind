@@ -33,18 +33,3 @@ const styles = StyleSheet.create({
     paddingVertical: "15px",
   },
 });
-
-/*
-- Tasks to render in each box
-- Morning tasks to go in the morning box 
--> how would we determine what the morning box is
--> morning box = morning because we're passing down a string as a prop 
-- to render: we map over array
-array.map((task, index) => (
-  return <Text key={index}>{task.task}</Text>))
-
-
-
-
-
-*/

@@ -1,15 +1,24 @@
 import { StyleSheet, View, Text, SafeAreaView } from "react-native";
 import React from "react";
 import CheckBox from "@react-native-community/checkbox";
+import { useState } from "react";
 
 export default function TaskDisplay({ task }) {
+  const [isClicked, setIsClicked] = useState(false);
+
   return (
     <View style={styles.container}>
       <View style={styles.checkboxContainer}>
-        <input type="checkbox" style={styles.checkbox} />
+        <input
+          type="checkbox"
+          style={styles.checkbox}
+          onChange={() => setIsClicked(!isClicked)}
+        />
       </View>
       <View style={styles.textContainer}>
-        <Text style={styles.text}>{task}</Text>
+        <Text style={isClicked === true ? styles.isClickedText : styles.text}>
+          {task}
+        </Text>
       </View>
     </View>
   );
@@ -17,8 +26,6 @@ export default function TaskDisplay({ task }) {
 
 const styles = StyleSheet.create({
   container: {
-    // borderWidth: "3px",
-    // borderColor: "red",
     flexDirection: "row",
     justifyContent: "space-between",
     width: "20rem",
@@ -26,8 +33,6 @@ const styles = StyleSheet.create({
     marginLeft: 3,
   },
   checkboxContainer: {
-    // borderWidth: "3px",
-    // borderColor: "blue",
     flexDirection: "row",
   },
   checkbox: {
@@ -36,8 +41,6 @@ const styles = StyleSheet.create({
     color: "#77567A",
   },
   textContainer: {
-    // borderWidth: "3px",
-    // borderColor: "green",
     flexDirection: "row",
     flex: 1,
     flexWrap: "wrap",
@@ -46,5 +49,10 @@ const styles = StyleSheet.create({
   text: {
     color: "#77567A",
     fontWeight: "bold",
+  },
+  isClickedText: {
+    color: "#77567A",
+    fontWeight: "bold",
+    textDecorationLine: "line-through",
   },
 });

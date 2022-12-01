@@ -22,6 +22,13 @@ export default function RoutineDisplay({
     console.log(taskArray);
     setPopup(false);
   }
+
+  function deleteTask(key) {
+    const newList = taskArray.filter((itemObj) => {
+      return itemObj.key !== key;
+    });
+    setTaskArray(newList);
+  }
   return (
     <View style={styles.container}>
       <View style={styles.textbutton}>
@@ -44,7 +51,7 @@ export default function RoutineDisplay({
           setPopup={setPopup}
         />
       </View>
-      <PMBox array={taskArray} />
+      <PMBox array={taskArray} deleteTask={deleteTask} />
     </View>
   );
 }

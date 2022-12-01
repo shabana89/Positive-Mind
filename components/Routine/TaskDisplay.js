@@ -1,9 +1,9 @@
-import { StyleSheet, View, Text, SafeAreaView } from "react-native";
+import { StyleSheet, View, Text, SafeAreaView, Button } from "react-native";
 import React from "react";
 import CheckBox from "@react-native-community/checkbox";
 import { useState } from "react";
 
-export default function TaskDisplay({ task }) {
+export default function TaskDisplay({ task, deleteTask, id }) {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
@@ -19,6 +19,7 @@ export default function TaskDisplay({ task }) {
         <Text style={isClicked === true ? styles.isClickedText : styles.text}>
           {task}
         </Text>
+        <Button onClick={() => deleteTask(id)}>x</Button>
       </View>
     </View>
   );

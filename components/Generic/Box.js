@@ -7,12 +7,17 @@ import {
 } from "../../libs/tasksRoutine";
 import TaskDisplay from "../Routine/TaskDisplay";
 
-export default function PMBox({ array }) {
+export default function PMBox({ array, deleteTask }) {
   return (
     <View style={styles.container}>
       <ScrollView>
         {array.map((task, index) => (
-          <TaskDisplay task={task.task} key={index} />
+          <TaskDisplay
+            task={task.task}
+            id={task.id}
+            key={index}
+            deleteTask={deleteTask}
+          />
         ))}
       </ScrollView>
     </View>

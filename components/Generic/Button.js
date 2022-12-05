@@ -53,7 +53,7 @@ export default function PMButton({
           <TextInput
             style={styles.input}
             multiline={true}
-            maxLength={100}
+            maxLength={38}
             onChangeText={setUserInput}
           />
           <DialogButton

@@ -24,7 +24,7 @@ export default function TaskDisplay({ task, deleteTask, id }) {
         <View style={styles.deleteTaskButton}>
           <CancelIcon
             style={{
-              fill: "#77567A",
+              fill: "#e21d3a",
               height: "25px",
               width: "25px",
             }}
@@ -42,11 +42,11 @@ const styles = StyleSheet.create({
     justifyContent: "",
     alignContent: "center",
     width: "20rem",
-    marginBottom: 10,
-    marginLeft: 3,
+    marginBottom: 1,
+    marginLeft: 5,
     borderColor: "#77567A",
-    borderWidth: "2px",
-    borderRadius: "10px",
+    // borderWidth: "2px",
+    // borderRadius: "10px",
   },
   checkboxContainer: {
     flexDirection: "row",
@@ -86,5 +86,6 @@ const styles = StyleSheet.create({
     // borderColor: "blue",
     // borderWidth: "2px",
     marginTop: "10px",
+    marginRight: 10,
   },
 });

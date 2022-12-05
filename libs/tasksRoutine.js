@@ -5,15 +5,15 @@ const tasksMorning = [
   },
   {
     id: "2",
-    task: "This is a Morning task This is a Morning task",
+    task: "This is a Morning task",
   },
   {
     id: "3",
-    task: "This is a Morning task This is a Morning task This is a Morning task",
+    task: "This is a Morning task ",
   },
   {
     id: "4",
-    task: "Morning task",
+    task: "This is a Morning task",
   },
   {
     id: "5",

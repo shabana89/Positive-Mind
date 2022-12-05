@@ -24,8 +24,10 @@ export default function RoutineDisplay({
   }
 
   function deleteTask(key) {
+    console.log("id", key.preventDefault());
+    console.log("clicked", key);
     const newList = taskArray.filter((itemObj) => {
-      return itemObj.key !== key;
+      return itemObj.id !== id;
     });
     setTaskArray(newList);
   }

@@ -1,4 +1,11 @@
-import { StyleSheet, View, Text, SafeAreaView } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  SafeAreaView,
+  TouchableHighlight,
+  Button,
+} from "react-native";
 import React from "react";
 import PMBox from "../Generic/Box";
 import PMButton from "../Generic/Button";
@@ -31,6 +38,10 @@ export default function RoutineDisplay({
     });
     setTaskArray(newList);
   }
+  function deleteAllTasks() {
+    setTaskArray([]);
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.textbutton}>
@@ -54,6 +65,16 @@ export default function RoutineDisplay({
         />
       </View>
       <PMBox array={taskArray} deleteTask={deleteTask} />
+      <View style={styles.touchableContainer}>
+        <TouchableHighlight style={styles.clearButtonContainer}>
+          <Button
+            title="Clear"
+            color="rgba(255, 0, 0, 0.0);"
+            accessibilityLabel={`Clear All Tasks Button for ${time}`}
+            onPress={deleteAllTasks}
+          />
+        </TouchableHighlight>
+      </View>
     </View>
   );
 }
@@ -66,6 +87,19 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     flexDirection: "row",
     marginBottom: "10px",
+  },
+  touchableContainer: {
+    marginTop: "10px",
+
+    flexDirection: "row",
+    justifyContent: "center",
+  },
+  clearButtonContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    borderRadius: "10px",
+    backgroundColor: "#77567A",
+    width: "60px",
   },
 });
 

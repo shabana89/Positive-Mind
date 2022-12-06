@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
     // borderColor: "#77567A",
     // borderWidth: "2px",
     // borderRadius: "10px",
+    marginBottom: "10px",
   },
   checkboxContainer: {
     flexDirection: "row",

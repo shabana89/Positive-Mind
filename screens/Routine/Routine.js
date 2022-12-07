@@ -21,7 +21,6 @@ export default function Routine() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Navbar />
       <RoutineDisplay
         time={"Morning"}
         todArray={tasksMorning}

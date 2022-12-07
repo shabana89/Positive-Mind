@@ -81,7 +81,7 @@ export default function RoutineDisplay({
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: "40px",
+    marginBottom: "20px",
   },
   textbutton: {
     justifyContent: "space-between",

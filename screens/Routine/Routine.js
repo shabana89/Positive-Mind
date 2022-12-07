@@ -6,6 +6,7 @@ import {
   tasksAfternoon,
   tasksEvening,
 } from "../../libs/tasksRoutine";
+import Navbar from "../../components/Navbar/Navbar";
 
 export default function Routine() {
   function morningClick() {
@@ -20,6 +21,7 @@ export default function Routine() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Navbar />
       <RoutineDisplay
         time={"Morning"}
         todArray={tasksMorning}
